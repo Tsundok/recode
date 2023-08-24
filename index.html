@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+          background-image: url(/Users/dawn/Desktop/test/c.jpg);
+          background-repeat: no-repeat;
+          background-attachment:fixed;
+          background-size: cover; 
+    }
+        .header{
+            height: 30%;
+            width: 100%;
+            text-align: center;
+            font-size: 50px;
+            font-family:'fantasy';
+            color: blueviolet;
+        }
+        .tishi{
+            margin-top: 100px;
+            font-size: 30px;
+            text-align: center;
+        }
+        .a{
+            
+            margin-left: 40%;
+            width: 20%;
+            height: 40px;
+            
+        }
+        .b{
+            margin-top: 20px;
+            margin-left: 45%;
+            width: 10%;
+            height: 40px;
+        }
+    </style>
+</head>
+
+
+<body>
+<div class="header">给小曾小朋友做的第一版页面</div>
+<!--<p class="tishi"><strong>Date of the first day of love</strong></p>-->
+<h1 class="tishi">速速输入密码</h1>
+    <form id="passwordForm">
+        <div><input type="password" id="passwordInput" class="a" placeholder="小小提示是一个重要日子"></div>
+        <div><input type="submit" value="提交" class="b"></div>
+    </form>
+
+    <script>
+        document.getElementById("passwordForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent the form from submitting normally
+
+            var enteredPassword = document.getElementById("passwordInput").value;
+            var presetPassword = "2020.8.27"; // Replace this with your preset password
+
+            if (enteredPassword === presetPassword) {
+                // Passwords match, redirect to another page
+                window.location.href = "L.html";
+            } else {
+                alert("这要是都能错就该打屁股了.");
+            }
+        });
+    </script>
+
+
+    
+</body>
+</html>
